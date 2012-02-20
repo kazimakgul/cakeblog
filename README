@@ -1,6 +1,8 @@
+
 ===Project Installation===
 1- Clone files under your working directory.
 2- import the /app/Config/Schema/cakeblogDB.sql to your DB
+3- dont forget to 'sudo chmod -R 777 tmp/' if you see permission errors on cache
 
 and your cakephp should be ready to develop
 
