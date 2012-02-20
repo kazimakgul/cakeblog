@@ -1,3 +1,64 @@
+===Project Installation===
+1- Clone files under your working directory.
+2- import the /app/Config/Schema/cakeblogDB.sql to your DB
+
+and your cakephp should be ready to develop
+
+=Previewsly Done=
+1- DB config
+
+/* First, create our posts table: */
+CREATE TABLE posts (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),
+    body TEXT,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+/* Then insert some posts for testing: */
+INSERT INTO posts (title,body,created)
+    VALUES ('The title', 'This is the post body.', NOW());
+INSERT INTO posts (title,body,created)
+    VALUES ('A title once again', 'And the post body follows.', NOW());
+INSERT INTO posts (title,body,created)
+    VALUES ('Title strikes back', 'This is really exciting! Not.', NOW());
+
+2-
+
+<?php
+public $default = array(
+    'datasource' => 'Database/Mysql',
+    'persistent' => false,
+    'host' => 'localhost',
+    'port' => '',
+    'login' => 'root',
+    'password' => '',
+    'database' => 'cakeblogDB',
+    'schema' => '',
+    'prefix' => '',
+    'encoding' => ''
+);
+
+3- 
+Change the default salt value by editing /app/Config/core.php line 187.
+?php
+/**
+ * A random string used in security hashing methods.
+ */
+Configure::write('Security.salt', 'pl345e-P45s_7h3*S@l7!');
+
+Change the default seed value by editing /app/Config/core.php line 192.
+<?php
+/**
+ * A random numeric string (digits only) used to encrypt/decrypt strings.
+ */
+Configure::write('Security.cipherSeed', '7485712659625147843639846751');
+
+4-
+chmod -R 777 app/tmp
+
+
 CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC. Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
 
 The Cake Software Foundation - promoting development related to CakePHP
