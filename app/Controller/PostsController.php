@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-
-?>
-=======
 <?php
 class PostsController extends AppController {
     public $name = 'Posts';
@@ -11,5 +7,13 @@ class PostsController extends AppController {
     public function index() {
         $this->set('posts', $this->Post->find('all'));
     }
+	
+	public function view($id)
+	{
+	$this->Post->id=$id;
+	$this->set("post",$this->post->read());
+	
+	}
+	
 }
->>>>>>> origin/master
+?>
