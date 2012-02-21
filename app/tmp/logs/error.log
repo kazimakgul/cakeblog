@@ -1,0 +1,3 @@
+2012-02-21 18:41:20 Error: [MissingControllerException] Controller class BlogController could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/cakeblog/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
